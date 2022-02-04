@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <link rel="icon" href="images/icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>CoHeal</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" style="height: 100px;width: 100px;" /></div>
+    </div>
+    <!-- Navbar -->
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#" style="margin-left: 100px;">
+                <h2>C<i class="fa fa-globe" aria-hidden="true"></i>Heal <i class="fa fa-heartbeat"
+                        style="color: rgb(255, 153, 230);" aria-hidden="true"></i></h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pvt">Spread</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#symptoms">Symptoms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prevention">Prevention</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lifespan.html">Lifespan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar -->
+
+    <!-- Banner -->
+    <br><br><br>
+    <section class="mb-3" id="banner" id="HomeTOP">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="./assets/undraw_doctors_hwty.svg" width="100%" height="100%" alt="banner">
+                </div>
+                <div class="col-md-4">
+                    <div style="text-align: center;">
+                        <h2>Prevention Against Coronavirus</h2>
+                        <h3>#Stay At Home</h3>
+                        <section id="donate">
+                            <a class="button" onclick="postYourAdd()">Talk to Mr.CoHope!</a>
+                        </section>
+                        <img src="images/bot.png" id="bot" onclick="postYourAdd()" style="height: 150px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="botNav">
+        <span class="botNavHead">Mr.CoHope CoHeal's Bot</span>
+        <button id="closeBtn" onclick="closeBot()" style="display:none;">X</button>
+    </div>
+    <div align="left">
+        <iframe id="invokeBot" data-src="https://healthcare-bot-zt4xp6lj4elw2.azurewebsites.net/" src="about:blank"
+            height="450" width="400" align="bottom" style="display: none;"></iframe>
+    </div>
+    <script>function postYourAdd() {
+            const iframe = $("#invokeBot");
+            iframe.attr("src", iframe.data("src"));
+            //document.getElementById("invokeBot").style.display = "block";
+            // await waitforme(10000);
+            async function printy() {
+                document.getElementById("invokeBot").style.display = "block";
+                //await waitforme(1000);
+                document.getElementById("closeBtn").style.display = "block";
+                document.querySelector(".botNav").style.display = "block";
+            }
+            printy();
+        }
+
+        function closeBot() {
+            document.getElementById("invokeBot").style.display = "none";
+            document.getElementById("closeBtn").style.display = "none";
+            document.querySelector(".botNav").style.display = "none";
+        }
+
+        async function waitforme(milisec) {
+            return new Promise(resolve => {
+                setTimeout(() => { resolve('') }, milisec);
+            })
+        }
+
+        function notAvailable() {
+            alert("All the Health Mentee are currently occupied. We will let you know when a Health Mentee is free.");
+        }</script>
+
+    <!-- Banner -->
+    <!-- Virus definition -->
+    <section id="about">
+        <div id="cells" style="position: relative;"><span style="position: relative; z-index: 1;">
+            </span><br>
+            <div class="about" style="z-index: 1;">
+                <div class="container_width">
+                    <div class="row d_flex">
+                        <div class="col-md-7">
+                            <div class="titlepage text_align_left">
+                                <h2>About Corona Virus </h2>
+                                <p><strong>Coronaviruses general info:</strong><br>
+                                    Coronaviruses are a group of related RNA viruses that cause diseases in mammals and
+                                    birds. In humans, these viruses cause respiratory tract infections that can range
+                                    from mild to lethal. Mild illnesses include some cases of the common cold while more
+                                    lethal varieties can cause SARS, MERS, and COVID-19. Symptoms in other species vary:
+                                    in chickens, they cause an upper respiratory tract disease, while in cows and pigs
+                                    they cause diarrhea. There are as yet no vaccines or antiviral drugs to prevent or
+                                    treat human coronavirus infections.<br>
+                                    <strong>Covid-19 History:</strong><br>
+                                    Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute
+                                    respiratory syndrome coronavirus 2. It was first identified in December 2019 in
+                                    Wuhan, China, and has since spread globally, resulting in an ongoing pandemic.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="about_img text_align_center">
+                                <figure><img src="images/about.png" alt="#"></figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div><span style="position: relative; z-index: 1;">
+            </span><canvas class="vanta-canvas" width="1206" height="950"
+                style="position: absolute; z-index: 0; top: 0px; left: 0px; width: 965px; height: 800px;"></canvas>
+        </div>
+        <script src="js/three.r95.min.js"></script>
+        <script src="js/vanta.cells.min.js"></script>
+        <script src="js/cells.js"></script>
+        <script src="js/counter.js"></script>
+    </section>
+    <!-- Virus definition -->
+
+    <section id="pvt">
+        <div class="coronata">
+            <div class="container">
+                <div class="row d_flex grid">
+                    <div class="col-md-7">
+                        <div class="coronata_img text_align_center">
+                            <figure><img src="images/corona.png" alt="#" style="float: left;height: 420px;"></figure>
+                        </div>
+                    </div>
+                    <div class="col-md-5 oder1">
+                        <div class="titlepage text_align_left">
+                            <h2 style="margin-left: 40px;">Does it spread?</h2><br>
+
+                            <ul style="margin-left: 20px;">
+                                <li> According to the CDC, the virus is thought to
+                                    be
+                                    spread mainly from
+                                    person-to-person. This means it may spread between people who are in close contact
+                                    with one another (within about 6 feet), or through respiratory droplets when an
+                                    infected person coughs or sneezes. These droplets can land in the mouths or noses of
+                                    people who are nearby or possibly be inhaled into the lungs. Some recent studies
+                                    have suggested that COVID-19 may be spread by people who are not showing symptoms.
+                                </li><br>
+                                <li>The CDC also reports that it may be possible for someone to get COVID-19 by touching
+                                    a surface or object with the virus on it, and then touching their own mouth, nose,
+                                    or possibly their eyes, but this is not thought to be the main way the virus
+                                    spreads.</li>
+                            </ul>
+
+                            <!-- <a class="read_more" href="coronata.html">About More</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="symptoms" style="background-color: #f1f7fd;">
+        <div class="container-fluid  pt-5 pb-5" id="sympid" style="padding: 0;margin: 0;">
+            <div class="section_header text-center mb-5 mt-4">
+                <h1 class="primary-color">Coronavirus symptoms</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/cough.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Cough
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/flu.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Cold
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/fever.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Fever
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/tired.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Tiredness
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/breathing.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Difficulty breathing
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-4 col-12 mt-5">
+                        <figure class="text-center">
+                            <img src="images/nose.png" class="img-fluid" alt="" width="120" ,="" height="120">
+                            <figcaption>
+                                Runny nose
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Symptomes --><br>
+    <section id="symptomes2" class="mb-5">
+        <div class="container p-3">
+            <h2 class="primary-color">Watch for symptoms</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 align-items-center" style="width: 400px; height: 400px;">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img class="align-self-center" src="./assets/cough.svg" style="width: 100%; height: 100%;"
+                                alt="cough">
+                            <p class="primary-color text-center">Cough</p>
+                        </div>
+                        <div class="col align-self-center">
+                            <img src="./assets/fever.svg" style="width: 100%; height: 100%;" alt="fever">
+                            <p class="primary-color text-center">Fever</p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <img src="./assets/patient.svg" style="width: 100%; height: 100%;" alt="headache">
+                            <p class="primary-color text-center">Headache</p>
+                        </div>
+                        <div class="col">
+                            <img src="./assets/lung.svg" style="width: 100%; height: 100%;" alt="lung">
+                            <p class="primary-color text-center">Hard breath</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <p class="text-justify text-muted">
+                        Reported illnesses have ranged from mild symptoms to severe illness and death for confirmed
+                        coronavirus disease 2019 (COVID-19) cases.
+                        The following symptoms may appear 2-14 days after exposure.</p>
+                    <ul>
+                        <li>Fever</li>
+                        <li>Cough</li>
+                        <li>Headache</li>
+                        <li>Shortness of breath</li>
+                    </ul>
+                    <p class="text-justify text-muted">
+                        This is based on what has been seen previously as the incubation period of MERS-CoV viruses.
+                    </p>
+                    <a class="button" href="sick.html">What to do if you are sick</a>
+                    <a class="button" href="protect-yourself.html">How to protect yourself </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Symptomes -->
+
+
+
+
+
+    <section id="prevention" style="background-color: #fbfafd;">
+        <div class="container-fluid sub_section pt-5 pb-5" id="preventid">
+            <div class="section_header text-center mb-5 mt-4">
+                <h1 class="primary-color">Coronavirus prevention</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/water.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>Wash your hands regulary for 20 seconds with soap and water or an alcohol based hand
+                                    wash.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/distance.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>Avoid close contact (1 meter or 3 feet ) with people who are unwell.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/pain.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>Cover your nose and mouth with a disposable tissue or your inner elbow when you
+                                    cough or sneeze.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="contactid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/chimney.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>Stay home and self-isolate if you feel unwell.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/tv.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>Stay informed by watching the news &amp; follow the recommended practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class="text-center">
+                                    <img src="images/virus.png" class="img-fluid" alt="" width="90" ,="" height="90">
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md 8 col-12">
+                                <p>If you have fever, cough, or difficulty breathing seek medical care immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="col"><img src="images/precaution.jpg"
+            style="width: 100%;height: 100%;padding-top: 15px;padding-bottom: 5px;"></div>
+
+
+
+
+
+
+
+
+
+    <section id="faq" class="faq section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                    As there are so many fake news roaming around about Covid-19, it is too hard to judge what is good
+                    and what is bad for us. To remove some conceptual confilcts and busting myths, we have this FAQ
+                    potions. All the resources are verified and are taken from
+                    autheticate sources.
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    <li data-aos="fade-up">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-1" class="collapsed"
+                            style="text-decoration: none;">What are the symptoms of
+                            COVID-19?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                            <p>
+                                The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients
+                                may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These
+                                symptoms are usually mild and begin gradually. Some people become infected but
+                                don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from
+                                the disease without needing special treatment. Around 1 out of every 6 people who gets
+                                COVID-19 becomes seriously ill and develops
+                                difficulty breathing. Older people, and those with underlying medical problems like high
+                                blood pressure, heart problems or diabetes, are more likely to develop serious illness.
+                                People with fever, cough and difficulty
+                                breathing should seek medical attention.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-2" class="collapsed"
+                            style="text-decoration: none;">How does COVID-19 spread?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                            <p>
+                                People can catch COVID-19 from others who have the virus. The disease can spread from
+                                person to person through small droplets from the nose or mouth which are spread when a
+                                person with COVID-19 coughs or exhales. These droplets land on objects and surfaces
+                                around the person. Other people then catch COVID-19 by touching these objects or
+                                surfaces, then touching their eyes, nose or mouth. People can also catch COVID-19 if
+                                they breathe in droplets from a person with COVID-19
+                                who coughs out or exhales droplets. This is why it is important to stay more than 1
+                                meter (3 feet) away from a person who is sick.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-3" class="collapsed"
+                            style="text-decoration: none;">Can the virus that causes
+                            COVID-19 be transmitted through the
+                            air? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                            <p>
+                                Studies to date suggest that the virus that causes COVID-19 is mainly transmitted
+                                through contact with respiratory droplets rather than through the air. See previous
+                                answer on “How does COVID-19 spread?”
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-4" class="collapsed"
+                            style="text-decoration: none;">Can CoVID-19 be caught from a
+                            person who has no symptoms?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                            <p>
+                                The main way the disease spreads is through respiratory droplets expelled by someone who
+                                is coughing. The risk of catching COVID-19 from someone with no symptoms at all is very
+                                low. However, many people with COVID-19 experience only mild symptoms. This
+                                is particularly true at the early stages of the disease. It is therefore possible to
+                                catch COVID-19 from someone who has, for example, just a mild cough and does not feel
+                                ill.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-5" class="collapsed"
+                            style="text-decoration: none;">Can I catch COVID-19 from the
+                            feces of someone with the
+                            disease? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+                            <p>
+                                The risk of catching COVID-19 from the feces of an infected person appears to be low.
+                                While initial investigations suggest the virus may be present in feces in some cases,
+                                spread through this route is not a main feature of the outbreak. The ongoing research
+                                on the ways COVID-19 is spread and will continue to share new findings. Because this is
+                                a risk, however, it is another reason to clean hands regularly, after using the bathroom
+                                and before eating.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-6" class="collapsed"
+                            style="text-decoration: none;">How likely am I to catch
+                            COVID-19?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+                            <p>
+                                The risk depends on where you are - and more specifically, whether there is a COVID-19
+                                outbreak unfolding there. For most people in most locations the risk of catching
+                                COVID-19 is still low. However, there are now places around the world (cities or areas)
+                                where the disease is spreading. For people living in, or visiting, these areas the risk
+                                of catching COVID-19 is higher. Governments and health authorities are taking vigorous
+                                action every time a new case of COVID-19
+                                is identified. Be sure to comply with any local restrictions on travel, movement or
+                                large gatherings. Cooperating with disease control efforts will reduce your risk of
+                                catching or spreading COVID-19. COVID-19 outbreaks
+                                can be contained and transmission stopped, as has been shown in China and some other
+                                countries. Unfortunately, new outbreaks can emerge rapidly. It’s important to be aware
+                                of the situation where you are or intend to
+                                go.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-7" class="collapsed"
+                            style="text-decoration: none;">Should I worry about
+                            COVID-19?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-7" class="collapse" data-parent=".faq-list">
+                            <p>
+                                Illness due to COVID-19 infection is generally mild, especially for children and young
+                                adults. However, it can cause serious illness: about 1 in every 5 people who catch it
+                                need hospital care. It is therefore quite normal for people to worry about how
+                                the COVID-19 outbreak will affect them and their loved ones. We can channel our concerns
+                                into actions to protect ourselves, our loved ones and our communities. First and
+                                foremost among these actions is regular and thorough
+                                hand-washing and good respiratory hygiene. Secondly, keep informed and follow the advice
+                                of the local health authorities including any restrictions put in place on travel,
+                                movement and gatherings.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="700">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-8" class="collapsed"
+                            style="text-decoration: none;">Who is at risk of developing
+                            severe illness?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-8" class="collapse" data-parent=".faq-list">
+                            <p>
+                                While we are still learning about how COVID-2019 affects people, older persons and
+                                persons with pre-existing medical conditions (such as high blood pressure, heart
+                                disease, lung disease, cancer or diabetes) appear to develop serious illness more often
+                                than others.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="800">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-9" class="collapsed"
+                            style="text-decoration: none;">Are antibiotics effective in
+                            preventing or treating the
+                            COVID-19? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-9" class="collapse" data-parent=".faq-list">
+                            <p>
+                                No. Antibiotics do not work against viruses, they only work on bacterial infections.
+                                COVID-19 is caused by a virus, so antibiotics do not work. Antibiotics should not be
+                                used as a means of prevention or treatment of COVID-19. They should only be used
+                                as directed by a physician to treat a bacterial infection.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="900">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-10" class="collapsed"
+                            style="text-decoration: none;">How long is the incubation
+                            period for COVID-19?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-10" class="collapse" data-parent=".faq-list">
+                            <p>
+                                The “incubation period” means the time between catching the virus and beginning to have
+                                symptoms of the disease. Most estimates of the incubation period for COVID-19 range from
+                                1-14 days, most commonly around five days. These estimates will be updated
+                                as more data become available.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="1000">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-toggle="collapse" href="#faq-list-11" class="collapsed"
+                            style="text-decoration: none;">Is it safe to receive a
+                            package from any area where COVID-19
+                            has been reported? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-11" class="collapse" data-parent=".faq-list">
+                            <p>
+                                Yes. The likelihood of an infected person contaminating commercial goods is low and the
+                                risk of catching the virus that causes COVID-19 from a package that has been moved,
+                                travelled, and exposed to different conditions and temperature is also low.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact For Suggestion</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <h4>Location:</h4>
+                            <p>Visakhapatnam, India</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <h4>Email:</h4>
+                            <p><a href="mailto:kothavvsaakash@gmail.com"
+                                    style="text-decoration: none;">kothavvsaakash@gmail.com</a></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <h4>Call:</h4>
+                            <p>+91-9876543210</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <form method="GET" action="mailto:kothavvsaakash@gmail.com" enctype="text/plain""
+                        class=" php-email-form">
+                        <div class="form-row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" required="">
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" data-rule="email">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <select name="subject" id="suggestion" class="form-control" required="">
+                                <option value="">Types of Suggestion</option>
+                                <option value="Bug Report">Bug Report</option>
+                                <option value="Feature Suggestion">
+                                    Feature Suggestion
+                                </option>
+                                <option value="General Helpline">General Helpline</option>
+                                <option value="Others">Others</option>
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="body" rows="5" data-rule="required"
+                                data-msg="Please write something for us" placeholder="Message" required=""></textarea>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">
+                                Your message has been sent. Thank you!
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+
+                    <script>
+                        const scriptURL =
+                            "https://script.google.com/macros/s/AKfycbx5wc0VyRKeE-7M2KmBtHORj0iapA6WC4gHyW1Lhlqoe1ltJCVJJOrub-f2fp7zmojv/exec";
+                        const form = document.forms["submit-to-google-sheet"];
+
+                        form.addEventListener("submit", (e) => {
+                            e.preventDefault();
+                            fetch(scriptURL, {
+                                method: "POST",
+                                body: new FormData(form),
+                            })
+                                .then((response) => console.log("Success!", response))
+                                .catch((error) => console.error("Error!", error.message));
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <h1 class="text-center"
+                style="color: var(--dark-two);font-size: 1.5rem;font-weight: normal;color: var(--dark-two);">
+                <a href="developer.html" style="color:rgb(58, 19, 233);">AakashKotha</a> ©
+                Copyright @ 2022
+            </h1>
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <img src="images/scroll-img.png" onclick="topFunction()" id="myBtn" title="Go to top" style="height: 80px;">
+    <script>//Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }</script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

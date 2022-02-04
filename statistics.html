@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Required meta tags -->
+	<link rel="icon" href="images/icon.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<link rel="stylesheet" href="css/responsive.css">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>CoHeal</title>
+
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+</head>
+
+<body>
+	<div class="loader_bg">
+		<div class="loader"><img src="images/loading.gif" alt="#" style="height: 100px;width: 100px;" /></div>
+	</div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="index.html" style="margin-left: 100px;">
+			<h2>C<i class="fa fa-globe" aria-hidden="true"></i>Heal <i class="fa fa-heartbeat"
+					style="color: rgb(255, 153, 230);" aria-hidden="true"></i></h2>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#pvt">Spread</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#symptoms">Symptoms</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#prevention">Prevention</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Statistics<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="lifespan.html">Lifespan</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#faq">FAQ's</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="donate.html">Donate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html#contact">Contact</a>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+	<!-- Navbar -->
+
+
+
+
+
+
+
+	<div class="container mt-4">
+		<div class="alert alert-info"> Click on any country to show details.</div>
+		<div class="table-responsive-sm countries-table">
+
+			<table class="table countries">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Country</th>
+						<th scope="col">Cases</th>
+						<th scope="col">Death</th>
+						<th scope="col">Recovered</th>
+						<th scope="col">Recovery/Mortality</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="modal fade countryDetailsModal" tabindex="-1" role="dialog" aria-labelledby="country-details"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title country-name"></h5>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12 col-md-8">
+							Graph
+						</div>
+					</div>
+					<div class="row records mt-4">
+						<div class="col-md-6 col-sm-6 col-12">
+							<canvas id="country"></canvas>
+						</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="row">
+								<div class="col-6 col-md-6">
+									<div class="card bg-primary text-white mb-3" style="max-width: 18rem;">
+										<div class="row">
+											<div class="col-sm-12">Active</div>
+										</div>
+										<div class="card-body text-white">
+											<h3 class="card-text active"></h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-6">
+									<div class="card bg-danger text-white mb-3" style="max-width: 18rem;">
+										<div class="row">
+											<div class="col-sm-12">Total cases</div>
+										</div>
+										<div class="card-body text-white">
+											<h3 class="card-text total-cases">4920</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6 col-md-6">
+									<div class="card bg-success text-white mb-3" style="max-width: 18rem;">
+										<div class="row">
+											<div class="col-sm-12">Recovered</div>
+										</div>
+										<div class="card-body text-white">
+											<h3 class="card-text recovered"></h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-6">
+									<div class="card bg-dark text-white mb-3" style="max-width: 18rem;">
+										<div class="row">
+											<div class="col-sm-12">Death</div>
+										</div>
+										<div class="card-body text-white">
+											<h3 class="card-text death"></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<script src="./main.js"></script>
+
+
+
+
+
+
+
+
+
+	<!-- Footer -->
+	<div id="footer">
+		<div class="container">
+			<h1 class="text-center"
+				style="color: var(--dark-two);font-size: 1.5rem;font-weight: normal;color: var(--dark-two);">
+				<a href="developer.html" style="color:rgb(58, 19, 233);">AakashKotha</a> ©
+				Copyright @ 2022
+			</h1>
+		</div>
+	</div>
+	<!-- Footer -->
+
+	<img src="images/scroll-img.png" onclick="topFunction()" id="myBtn" title="Go to top" style="height: 80px;">
+	<script>//Get the button:
+		mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}</script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+
+	<!-- Javascript files-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>
